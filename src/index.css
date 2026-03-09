@@ -79,3 +79,22 @@ button:focus-visible {
   width: 400px;
   object-fit: cover;
 }
+
+.CartItems img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.CartItems{
+  position: relative;
+  left: 100px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.singleCartProduct{
+  display: flex;
+}
