@@ -14,9 +14,18 @@ function ProductDetails(){
     return <>
         <div className="productDetails">
             <img src = {currentProduct.image}></img>
-            <h1>{currentProduct.name}</h1>
-            <p>{currentProduct.price}</p>
-            <button onClick = {() => {addToCart(currentProduct)}} >Add to Cart</button>
+            <div className="details">
+                <h2>{currentProduct.name}</h2>
+                <p>{currentProduct.price}</p>
+                <select name="size">
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+                <button onClick = {() => {addToCart(currentProduct)}} >Add to Cart</button>
+            </div>
         </div>
     </>
 }
