@@ -137,5 +137,8 @@ button:focus-visible {
 
 .singleCartProduct{
   display: flex;
+  background-color: antiquewhite;
+  justify-content: space-around;
+  align-items: center;
 }
 

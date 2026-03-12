@@ -16,6 +16,8 @@ function CartPage(){
                             image={product.image}
                             name={product.name}
                             price={product.price}
+                            size={product.size}
+                            quantity={product.quantity}
                             >    
                         </CartItem>
                     )
