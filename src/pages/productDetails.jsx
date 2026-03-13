@@ -11,7 +11,7 @@ function ProductDetails(){
     if(!currentProduct) return <h2>Product not found</h2>
 
     let {cart, addToCart} = useContext(CartContext);
-
+    
     return <>
         <div className="productDetails">
             <img src = {currentProduct.image}></img>
