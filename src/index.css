@@ -90,7 +90,7 @@ body{
 .navbar button::after{
   content: "";
   width: 0;
-  background-color: bisque;
+  background-color: black;
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -197,9 +197,21 @@ body{
 }
 
 #name{
+  margin-left: 7px;
   margin-bottom: 5px;
 }
 
 #price{
+  margin-left: 7px;
   margin-top: 0px;
+}
+
+.searchBox{
+  position: relative;
+  height: 6vh;
+  min-width: 17%;
+  left: 78%;
+  padding: 1px 1rem;
+  border: 1px solid;
+  border-radius: 1rem;
 }
