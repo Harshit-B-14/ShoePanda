@@ -16,7 +16,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route element = {<Layout/>}>
+          <Route element = {<Layout className=".navbar-container"/>}>
           <Route path="/" element = {<Home/>}></Route>
           <Route path="/about" element = {<About/>}></Route>
           <Route path="/products" element = {<Products/>}></Route>

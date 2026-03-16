@@ -6,9 +6,9 @@ function Navbar(props){
 
     const { cart } = useContext(CartContext);
 
-    return <div className={props.className}>
+    return <div className="navbar">
         <Link to="/">
-            <button>Home</button>
+            <button className="" >Home</button>
         </Link>
         <Link to="/about">
             <button>About</button>

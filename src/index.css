@@ -1,54 +1,48 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-}
-
-/* button {
-  border-radius: 8px;
-  border: 1px solid ;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: white;
-  cursor: pointer;
-  transition: border-color 0.25s;
 } */
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+body{
+  margin: 0px;
+  padding: 0px;
 }
 
 .Products{
   display: flex;
+  flex-wrap: wrap;
+  margin: 5rem 0;  
   justify-content: center;
+  width: 100%;
+  gap: 1.2rem 1%;
+  /* background-color: aqua; */
 }
+
 .ProductCard{
+  border: 1px white solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  width: 400px;
-  max-width: 400px;
-  background-color: white;
-  margin: 1rem;
+  align-items: flex-start;
+  width: 300px;
+  color: black;
+  /* background-color: black; */
 }
 
 .ProductCard img{
   margin: 0px;
   object-fit: cover;
   width: 300px;
-  height: 300px;
+  height: 400px;
+  border-radius: 20px;
 }
 
-.navbar{
-  float: right;
+.link{
+  text-decoration: none;
 }
+
+.navbar-container{}
 
 .logo{
   display: flex;
@@ -65,6 +59,53 @@ button:focus-visible {
   height: 70px;
   width: 70px;
 }
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: auto;
+}
+
+.navbar button{
+  position: relative;
+  border: none;
+  /* border-left: 1px solid black; */
+  height: 6vh;
+  width: 6em;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  /* margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px; */
+}
+
+.navbar button::after{
+  content: "";
+  width: 0;
+  background-color: bisque;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  transition: width 0.25s ease;
+}
+
+.navbar button:hover::after{
+  width: 100%;
+}
+
+.navbar a:first-child button{
+  border: none;
+}
+
 
 .productDetails{
   /* position: relative;
@@ -85,6 +126,7 @@ button:focus-visible {
 .productDetails img{
   height: 400px;
   width: 400px;
+  border-radius: 20px;
   object-fit: cover;
 }
 
@@ -128,11 +170,12 @@ button:focus-visible {
 
 .CartItems{
   position: relative;
-  left: 100px;
+  left: 10%;
   top: 100px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 80%;
 }
 
 .singleCartProduct{
@@ -142,3 +185,21 @@ button:focus-visible {
   align-items: center;
 }
 
+.hero{
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.hero img{
+  height: 60vh;
+  max-width: 100%;
+}
+
+#name{
+  margin-bottom: 5px;
+}
+
+#price{
+  margin-top: 0px;
+}
