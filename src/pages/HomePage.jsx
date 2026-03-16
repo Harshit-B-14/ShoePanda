@@ -1,6 +1,5 @@
 import ProductCard from "../components/productCard";
 import ProductList from "../assets/productList";
-
 import hero from "../assets/Hero.avif"
 import {Link} from "react-router-dom"
 
