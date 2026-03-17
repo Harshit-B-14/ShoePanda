@@ -231,3 +231,40 @@ body{
   border: 1px solid;
   border-radius: 1rem;
 }
+
+form{
+  display: flex;
+  gap: 10% 10%;
+  flex-wrap: wrap;
+  background-color: bisque;
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 50%;
+  height: 80vh;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  height: 10vh;
+  width: 44%;
+}
+
+form input{
+  height: 4vh;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+form label{
+  font-size: 1rem;
+}
+
+#checkout-heading{
+  margin-top: 4vh;
+  margin-left: 5%;
+  margin-bottom: 0px;
+}
