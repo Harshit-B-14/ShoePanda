@@ -25,7 +25,7 @@ function CartPage(){
                         )
                     })}
                 <h2>{cart.length > 0 && `Total : ${cartTotal}`}</h2>
-                {cart.length > 0 && (<button onClick = {() => navigate("/checkout")} >Checkout</button>)}
+                {cart.length > 0 && (<button className="checkout-button" onClick = {() => navigate("/checkout")} >Checkout</button>)}
             </div>
     </>
 }

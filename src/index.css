@@ -49,7 +49,7 @@ body{
 }
 
 .logo p{
-  margin-top: 14px;
+  margin-top: 21px;
 }
 .logo img{
   padding: 0px;
@@ -61,6 +61,9 @@ body{
 .header{
   display: flex;
   justify-content: space-between;
+  /* border-bottom: solid 1px white;
+  box-shadow: 0px 10px 10px bisque; */
+  margin-bottom: 1rem;
 }
 
 .navbar{  
@@ -176,6 +179,18 @@ body{
   width: 80%;
 }
 
+.checkout-button{
+  display: block;
+  height: 6vh;
+  width: 20%;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 1.5vh;
+  color: white;
+  background-color: rgba(1, 130, 1, 0.781);
+}
+
 .singleCartProduct{
   display: flex;
   background-color: antiquewhite;
@@ -234,20 +249,22 @@ body{
 
 form{
   display: flex;
-  gap: 10% 10%;
   flex-wrap: wrap;
-  background-color: bisque;
+  /* background-color: bisque; */
   margin-left: 5%;
   margin-top: 2%;
   width: 50%;
-  height: 80vh;
+  height: auto;
+  gap: 20px 50px;
+  padding: 30px 30px;
+  border: 1px solid grey;
 }
 
 .input-field{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid black;
+  gap: 10px;
+  /* border: 1px solid black; */
   height: 10vh;
   width: 44%;
 }
@@ -255,7 +272,7 @@ form{
 form input{
   height: 4vh;
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid grey;
   border-radius: 5px;
 }
 
@@ -263,8 +280,28 @@ form label{
   font-size: 1rem;
 }
 
+
+form button{
+  display: block;
+  height: 6vh;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 1.5vh;
+  color: white;
+  background-color: rgba(1, 130, 1, 0.781);
+}
+
+form select{
+  height: 4vh;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
 #checkout-heading{
   margin-top: 4vh;
   margin-left: 5%;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
