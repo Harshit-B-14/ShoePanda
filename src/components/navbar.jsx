@@ -1,9 +1,14 @@
 import {Link} from "react-router-dom"
+import { useContext } from "react";
+import { CartContext } from "../context/cartContext";
 
 function Navbar(props){
-    return <div className={props.className}>
+
+    const { cart } = useContext(CartContext);
+
+    return <div className="navbar">
         <Link to="/">
-            <button>Home</button>
+            <button className="" >Home</button>
         </Link>
         <Link to="/about">
             <button>About</button>
@@ -18,7 +23,7 @@ function Navbar(props){
             <button>Log In</button>
         </Link>
         <Link to="/cart">
-            <button>Cart</button>
+            <button>Cart {cart.length}</button>
         </Link>
     </div>
 }
