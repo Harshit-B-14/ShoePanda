@@ -43,7 +43,6 @@ function CheckoutPage(){
             </form>
 
             <div className="order-summay">
-                haha
             </div>
         </>
     )

@@ -4,7 +4,7 @@ function ProductCard(info){
         <div className = "ProductCard">
             <img src={info.image}></img>
             <p id="name">{info.name}</p>
-            <p id="price">{info.price}</p>
+            <p id="price">${info.price}</p>
         </div>
     )
 }

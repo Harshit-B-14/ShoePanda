@@ -14,8 +14,8 @@ function CartItem({item}){
             <p>{price}</p>
             <p>{size}</p>
             <p>{quantity}</p>
-            <button onClick = {() => addToCart(item,size)}>+</button>
-            <button onClick = {() => reduceQuantity(item, size)}>-</button>
+            <button onClick = {() => addToCart(item,size,1)}>+</button>
+            <button onClick = {() => reduceQuantity(item)}>-</button>
             <button onClick = {() => removeProd(item, size)}> X </button>
         </div>
     );

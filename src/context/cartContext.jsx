@@ -1,58 +1,60 @@
-import { createContext, useEffect, useState } from "react";
+    import { createContext, useEffect, useState } from "react";
 
-const CartContext = createContext();
+    const CartContext = createContext();
 
-function CartProvider({ children }){
+    function CartProvider({ children }){
 
-    let [cart,setCart] = useState(() => {
-        const savedCart = localStorage.getItem("cart");
-        return savedCart ? JSON.parse(savedCart) : [];
-    });
-
-    useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }, [cart]);
-    
-    function addToCart(product, size){
-        setCart(prevCart => {
-            const existingItem = prevCart.find(item => item.id === product.id && item.size === size);
-            
-            if(existingItem){
-                return prevCart.map(item => 
-                    item.id === product.id && item.size === size ? {...item, quantity : item.quantity + 1} : item
-                )
-            }
-            return [...prevCart, { ...product, quantity:1, size, cartItemId : `${product.id}-${size}` }];
+        let [cart,setCart] = useState(() => {
+            const savedCart = localStorage.getItem("cart");
+            return savedCart ? JSON.parse(savedCart) : [];
         });
-    }
 
-    function reduceQuantity(product, size){
+        useEffect(() => {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }, [cart]);
         
-        setCart(prevCart => {
-            const currentProduct = prevCart.find(item => item.cartItemId === product.cartItemId);
+        function addToCart(product, size, quantity){
+            quantity = Number(quantity);
+            setCart(prevCart => {
+                const cartItemId = `${product.id}-${size}`;
+                const existingItem = prevCart.find(item => item.cartItemId === cartItemId);
                 
-                if (!currentProduct) return prevCart;
-
-                if(currentProduct.quantity === 1){
-                    return prevCart.filter(item => item.cartItemId !== product.cartItemId);
+                if(existingItem){
+                    return prevCart.map(item => 
+                        item.cartItemId === cartItemId ? {...item, quantity : item.quantity + quantity} : item
+                    )
                 }
+                return [...prevCart, { ...product, quantity: Number(quantity), size, cartItemId : `${product.id}-${size}` }];
+            });
+        }
 
-                return prevCart.map(item => 
-                    item.cartItemId === product.cartItemId ? {...item, quantity : item.quantity - 1} : item
-                )
-            }
-        )
+        function reduceQuantity(product){
+            
+            setCart(prevCart => {
+                const currentProduct = prevCart.find(item => item.cartItemId === product.cartItemId);
+                    
+                    if (!currentProduct) return prevCart;
+
+                    if(currentProduct.quantity === 1){
+                        return prevCart.filter(item => item.cartItemId !== product.cartItemId);
+                    }
+
+                    return prevCart.map(item => 
+                        item.cartItemId === product.cartItemId ? {...item, quantity : item.quantity - 1} : item
+                    )
+                }
+            )
+        }
+
+        function removeProd(product, size){
+            setCart( prevCart => 
+                prevCart.filter( item => item.cartItemId !== product.cartItemId)
+            )
+        }
+
+        return <CartContext.Provider value={ {cart, addToCart, reduceQuantity, removeProd} }>
+            {children}
+        </CartContext.Provider>
     }
 
-    function removeProd(product, size){
-        setCart( prevCart => 
-            prevCart.filter( item => item.cartItemId !== product.cartItemId)
-        )
-    }
-
-    return <CartContext.Provider value={ {cart, addToCart, reduceQuantity, removeProd} }>
-        {children}
-    </CartContext.Provider>
-}
-
-export { CartContext, CartProvider };
+    export { CartContext, CartProvider };

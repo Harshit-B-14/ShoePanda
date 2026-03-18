@@ -38,7 +38,7 @@ function Products(){
 
             {products.map((product) => 
                 {
-                    return <Link to={`/productDetails/${product.id}`} key = {product.id}>
+                    return <Link to={`/productDetails/${product.id}`} key = {product.id} className="link">
                         <ProductCard 
                             name = {product.name} 
                             image = {product.image} 
