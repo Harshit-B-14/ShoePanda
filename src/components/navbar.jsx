@@ -23,7 +23,7 @@ function Navbar(props){
             <button>Log In</button>
         </Link>
         <Link to="/cart">
-            <button>Cart {cart.length}</button>
+            <button><span className="material-symbols-outlined">shopping_cart</span><span id="cart-length">{cart.length}</span></button>
         </Link>
     </div>
 }
