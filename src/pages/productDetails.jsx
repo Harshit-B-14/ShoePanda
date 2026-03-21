@@ -33,6 +33,7 @@ function ProductDetails(){
                         )
                     )}
                 </div>
+                <p className="size-selector-text">Quantity :</p>
                 <select onChange = {(e) => setQuantity(Number(e.target.value))} name="Quantity">
                     <option>1</option>
                     <option>2</option>

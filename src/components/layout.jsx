@@ -1,12 +1,19 @@
 import {Outlet} from "react-router-dom";
 import Navbar from "./navbar";
+import Footer from "./footer";
 import panda from "../assets/panda-logo.jpg"
-
+import { useNavigate } from "react-router-dom";
 function Layout(){
+    
+    let navigate = useNavigate();
+    function logoClick(){
+        navigate('/');
+    }
+
     return (
         <>
             <div className="header">
-                <div className="logo">
+                <div onClick={logoClick} className="logo">
                     <img src={panda}/>
                     <p>ShoePanda</p>
                 </div>
@@ -15,6 +22,7 @@ function Layout(){
             <main>
                 <Outlet/>
             </main>
+            <Footer></Footer>
         </>
     )
 }

@@ -52,7 +52,11 @@
             )
         }
 
-        return <CartContext.Provider value={ {cart, addToCart, reduceQuantity, removeProd} }>
+        function clearCart(){
+            setCart([]);
+        }
+
+        return <CartContext.Provider value={ {cart, addToCart, reduceQuantity, removeProd, clearCart} }>
             {children}
         </CartContext.Provider>
     }

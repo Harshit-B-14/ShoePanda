@@ -7,6 +7,10 @@ function CartPage(){
 
     let navigate = useNavigate();
 
+    function continueShopping(){
+        navigate("/");
+    }
+
     let { cart } = useContext(CartContext);
     const cartTotal = cart.length>0 ? 
         cart.reduce((total, item) => total + (item.price *  item.quantity), 0) : 0;
@@ -14,7 +18,11 @@ function CartPage(){
     return <>
         {/* <Header></Header> */}
             <div className="CartItems">
-                {cart.length === 0 ? (<p>Your Cart is empty</p>) : 
+                {cart.length === 0 ? 
+                        (<div className="empty-cart-message">
+                            <p>Your Cart is empty</p>
+                            <button onClick={continueShopping} className="checkout-button">Back to Shopping</button>
+                        </div>) : 
                         cart.map((product) => {
                         return (
                             <CartItem

@@ -10,9 +10,6 @@ function Navbar(props){
         <Link to="/">
             <button className="" >Home</button>
         </Link>
-        <Link to="/about">
-            <button>About</button>
-        </Link>
         <Link to="/products">
             <button>Products</button>
         </Link>
@@ -23,7 +20,9 @@ function Navbar(props){
             <button>Log In</button>
         </Link>
         <Link to="/cart">
-            <button><span className="material-symbols-outlined">shopping_cart</span><span id="cart-length">{cart.length}</span></button>
+            <button className="cart-button"><span className="material-symbols-outlined">cart</span>
+            {cart.length > 0 && <span id="cart-length">{cart.length}</span>}
+            </button>
         </Link>
     </div>
 }
