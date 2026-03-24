@@ -11,12 +11,14 @@ import CartPage from './pages/cart'
 import ProductDetails from './pages/productDetails'
 import CheckoutPage from './pages/checkoutPage'
 import OrderPlaced from './pages/order-placed'
+import ScrollToTop from './components/scrollToTop'
 
 function App() {
 
   return (
     <>
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Routes>
           <Route element = {<Layout className=".navbar-container"/>}>
           <Route path="/" element = {<Home/>}></Route>

@@ -1,32 +1,49 @@
+import panda from "../assets/panda-logo.jpg"
+import { useNavigate } from "react-router-dom"
+
 function Footer(){
+    
+    let navigate = useNavigate();
+
     return(
-        <div className="footer">
-            <div className="contact-container1 contact-us">
-                <p>panda.shoes@shop.com</p>
-                <p>text2</p>
-                <p>text3</p>
-                <p>text4</p>
+        <>
+            <div className="footer">
+                <div className="footer-logo-container contact-us">
+                    <div className="footer-logo">
+                        <img src={panda}/>
+                        <p>ShoePanda</p>
+                    </div>
+                    <p className="intro">Modern shoe store offering a thoughtfully curated collection of stylish,
+                        comfortable, and high-quality footwear for everyday wear.
+                    </p>
+                </div>
+                <div className="footer-company contact-us">
+                    <h2>Company</h2>
+                    <p onClick = {() => {navigate('/about')}} >About</p>
+                    <p>Careers</p>
+                    <p>Gift Vouchers</p>
+                    <p>How it Works</p>
+                </div>
+                <div className="footer-support contact-us">
+                    <h2>Support</h2>
+                    <p>Customer Service</p>
+                    <p>Quick Chat</p>
+                    <p onClick = {() => {navigate('/contact')}}>Contact Us</p>
+                </div>
+                <div className="footer-more-info contact-us">
+                    <h2>More Info</h2>
+                    <p>T&C</p>
+                    <p>Privacy Policy</p>
+                    <p>Blogs</p>
+                    <p>Get Notified</p>
+                </div>
             </div>
-            <div className="contact-container2 contact-us">
-                <p>panda.shoes@shop.com</p>
-                <p>text2</p>
-                <p>text3</p>
-                <p>text4</p>
+            <div className="copyright">
+                <p>Copyright @2026 ShoePanda</p>
+                <p>Designed by : Harshit Bhandari</p>
+                <p>Code by : Harshit-B-14 on GitHub</p>
             </div>
-            <div className="contact-container3 contact-us">
-                <p>panda.shoes@shop.com</p>
-                <p>text2</p>
-                <p>text3</p>
-                <p>text4</p>
-            </div>
-            <div className="contact-container4 contact-us">
-                <p>panda.shoes@shop.com</p>
-                <p>text2</p>
-                <p>text3</p>
-                <p>text4</p>
-            </div>
-            <p className="copyright">copyright ShoePanda@2026 </p>
-        </div>
+        </>
     )
 }
 
