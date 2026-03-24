@@ -8,6 +8,7 @@
 body{
   margin: 0px;
   padding: 0px;
+  /* background-color: rgb(84, 84, 84); */
 }
 
 .Products{
@@ -161,10 +162,26 @@ body{
   grid-area: 4/2/5/4;
 }
 
+.about-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: rgb(106, 185, 100); */
+  margin-bottom: 4%;
+  padding: 3% 5%;
+  background-color: rgb(255, 249, 227);
+}
+
+.about-text p{
+    width: 95%;
+    font-size: 1.1rem;
+}
+
 #cart-length{
   position: absolute;
-  top: 1px;
-  right: 20px;
+  top: 26.5px;
+  right: 5px;
   width: 18px;              /* fixed width */
   height: 18px;             /* fixed height */
   font-size: 0.8rem;        /* make number readable */

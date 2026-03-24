@@ -18,7 +18,7 @@ function CheckoutPage(){
             <form onSubmit = {handleCheckout}>
                 <div className="input-field">
                     <label htmlFor="checkout-name">First Name* </label>
-                    <input type="text" placeholder="name" />
+                    <input type="text" placeholder="name" required/>
                 </div>
                 
                 <div className="input-field">
@@ -28,22 +28,22 @@ function CheckoutPage(){
 
                 <div className="input-field">
                     <label htmlFor="address"> Address* </label>
-                    <input type="text" placeholder="address" />
+                    <input type="text" placeholder="address" required/>
                 </div>
                 
                 <div className="input-field">
                     <label htmlFor="email"> Email* </label>
-                    <input type="email" placeholder="email" />
+                    <input type="email" placeholder="email" required />
                 </div>
                 
                 <div className="input-field">
                     <label htmlFor="phone-no"> Phone no.* </label>
-                    <input type="tel" placeholder="phone-no" pattern="[0-9]{10}"/>
+                    <input type="tel" placeholder="phone-no" pattern="[0-9]{10}" required/>
                 </div>
 
                 <div className="input-field">
                     <label>Mode of Payment*</label>
-                    <select >
+                    <select required>
                         <option value="">Select</option>
                         <option>COD</option>
                         <option>Credit Card</option>
