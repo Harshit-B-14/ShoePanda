@@ -23,7 +23,7 @@ function About(){
                 everything I knew combined with things I did not know to build this.
                 </p>
 
-                <p>The biggest takewaway from this project is really just getting started and making stuff exist first and
+                <p>The biggest takeaway from this project is really just getting started and making stuff exist first and
                 then making it perfect, not the other way around.
                 </p>
         </div>

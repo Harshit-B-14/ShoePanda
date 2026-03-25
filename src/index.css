@@ -185,14 +185,20 @@ button{
   justify-content: center;
   flex-direction: column;
   /* background-color: rgb(106, 185, 100); */
-  margin-bottom: 4%;
   padding: 3% 5%;
-  background-color: rgb(255, 249, 227);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .about-text p{
     width: 95%;
     font-size: 1.1rem;
+}
+
+.about-text h2{
+  margin-top: 15px;
+  margin-bottom: 1.5rem;
+  font-size: 2.3rem;
 }
 
 .contact{
@@ -248,6 +254,7 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 60vh;
 }
 
 .empty-cart-message p{
@@ -389,6 +396,11 @@ button{
   background-color: rgba(1, 130, 1, 0.781);
 }
 
+.checkout-button:active {
+  background-color: rgba(18, 170, 18, 0.664);
+  transform: scale(1);
+}
+
 .cartPage{
   border: 2px solid rgb(219, 219, 219);
   background: rgb(255, 255, 255);
@@ -466,6 +478,10 @@ h1.grid-item{
   border-radius: 4px;
 }
 
+.remove:active {
+  background-color: rgb(245, 110, 110);
+  transform: scale(1);
+}
 /* .grid-item{
   background-color: black;
 } */
@@ -551,7 +567,6 @@ form label{
   font-size: 1rem;
 }
 
-
 form button{
   display: block;
   height: 6vh;
@@ -562,6 +577,11 @@ form button{
   border-radius: 1.5vh;
   color: white;
   background-color: rgba(1, 130, 1, 0.781);
+}
+
+form button:active {
+  background-color: rgba(18, 170, 18, 0.664);
+  transform: scale(1);
 }
 
 form select{
