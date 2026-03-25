@@ -9,6 +9,11 @@ body{
   margin: 0px;
   padding: 0px;
   /* background-color: rgb(84, 84, 84); */
+  font-family: 'Google Sans',sans-serif;
+}
+
+button{
+  font-family: 'Google Sans',sans-serif;
 }
 
 .Products{
@@ -47,7 +52,7 @@ body{
 .logo{
   padding: 5px 10px;
   display: flex;
-  font: 2rem Limelight, san-serif;
+  font: 2rem Limelight, san-w;
 }
 
 .logo p{
@@ -72,6 +77,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+
   height: 10vh;
   width: auto;
 }
@@ -84,6 +90,9 @@ body{
   width: 6em;
   background-color: white;
   transition: box-shadow 0.3s ease;
+  font-family: 'Google sans', sans-serif;
+  font-weight: 450;
+  font-size: 1rem;
   /* margin-left: 0px;
   margin-right: 0px;
   padding-left: 0px;
@@ -135,6 +144,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-left: -1.25rem;
 }
 .footer-logo-container p{
   width: 80%;
@@ -183,6 +193,39 @@ body{
 .about-text p{
     width: 95%;
     font-size: 1.1rem;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 60vh; */
+  gap: 2.5rem;
+  padding: 4%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-heading{
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.contact-details{
+  display: flex;
+  gap: 2.5rem;
+}
+
+.contact-follow{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.important-p{
+  margin: 0;
+  font-size: 1.4rem;
 }
 
 #cart-length{
@@ -280,6 +323,11 @@ body{
   color: white;
 }
 
+.details button:active {
+  background-color: rgb(77, 77, 77);
+  transform: scale(1);
+}
+
 .size-selector{
   display: flex;
   width: 100%;
@@ -336,7 +384,7 @@ body{
   width: 20%;
   font-size: 1.15rem;
   border: none;
-  border-radius: 1.5vh;
+  border-radius: 0.7vh;
   color: white;
   background-color: rgba(1, 130, 1, 0.781);
 }

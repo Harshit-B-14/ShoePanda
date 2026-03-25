@@ -12,7 +12,7 @@ function CartItem({item}){
             <div className="singleCartProduct grid-container">
                 <img className="grid-item" src = {image}></img>
                 <h1 className="grid-item name">{name}</h1>
-                <p className="grid-item price">${price}</p>
+                <p className="grid-item price">₹{price}</p>
                 <p className="grid-item size">Size : {size}</p>
                 <p className="grid-item quantity">Quantity : {quantity}</p>
                 <div className="btn-container">

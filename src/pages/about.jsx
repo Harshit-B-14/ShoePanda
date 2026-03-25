@@ -1,6 +1,7 @@
 function About(){
     return (
         <div className="about-text">
+                <h2>About ShoePanda</h2>
                 <p>ShoePanda: My first proper e-commerce project that I made. I just started building thinking I should 
                 just start without thinking too much about how I am gonna make it and just figure out the rest on 
                 the way.

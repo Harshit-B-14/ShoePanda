@@ -19,7 +19,7 @@ function ProductDetails(){
             <div className="details">
                 <h2>{currentProduct.name}</h2>
                 
-                <p>${currentProduct.price}</p>
+                <p>₹{currentProduct.price}</p>
 
                 <p className="size-selector-text">Please select a size</p>
                 <div className="size-selector">
@@ -28,7 +28,7 @@ function ProductDetails(){
                                     key={s}
                                     className = {`sizeButton ${size === s ? "Active" : "Not"}`}
                                     onClick={() => setSize(s)}
-                                >UK{s}
+                                >UK&nbsp;{s}
                                 </button>
                         )
                     )}
