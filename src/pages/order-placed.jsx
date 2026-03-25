@@ -9,7 +9,9 @@ function OrderPlaced(){
     }
 
     return (
-        <div style={{display: "flex", alignItems: "center", justifyContent:"center", flexDirection: "column", marginBottom: "10%" }}>
+        <div style={{display: "flex", alignItems: "center", 
+                     justifyContent:"center", flexDirection: "column", 
+                     height: "60vh" }}>
             <h1>Order Placed Successfully🎉</h1>
             <h2>Thank you for your purchase</h2>
             <button onClick={continueShopping} className="checkout-button">Continue Shopping</button>

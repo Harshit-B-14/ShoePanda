@@ -369,26 +369,22 @@ button{
 
 .CartItems{
   position: relative;
-  left: 10%;
   /* background-color: black; */
   display: flex;
   flex-direction: column;
-  width: 80%;
+  border: 3px solid rgb(219, 219, 219);
+  border-radius: 10px;
+  width: 70%;
 }
 
-.checkout-corner{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  height: 19vh;
+.CartItems.empty{
+  border: none;
 }
 
 .checkout-button{
   display: block;
   height: 6vh;
-  width: 20%;
+ 
   font-size: 1.15rem;
   border: none;
   border-radius: 0.7vh;
@@ -401,17 +397,18 @@ button{
   transform: scale(1);
 }
 
-.cartPage{
-  border: 2px solid rgb(219, 219, 219);
-  background: rgb(255, 255, 255);
-  border-radius: 4px;
-}
-
 .singleCartProduct{
-  background-color: white;
   justify-content: space-around;
   align-items: center;
   margin: 0;
+}
+
+.cartPage {
+  border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.cartPage:last-child {
+  border-bottom: none;
 }
 
 .grid-container{
@@ -482,10 +479,37 @@ h1.grid-item{
   background-color: rgb(245, 110, 110);
   transform: scale(1);
 }
+
+.order-summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid #e6e5e5;
+  background-color: #e6e5e5;
+  border-radius: 10px;
+  padding: 1rem;
+  height: 35vh;
+  width: 20%;
+}
+
+.order-summary h1{
+  margin: 0;
+}
+
+.order-summary h2{
+  margin: 0;
+}
+
+.cartPage-container{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40vh;
+}
 /* .grid-item{
   background-color: black;
 } */
 
+/* home styling */
 .hero{
   margin: 0;
   padding: 0;
