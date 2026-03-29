@@ -30,7 +30,7 @@
     border: 1px white solid;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex;
     align-items: flex-start;
     width: 300px;
     color: black;
@@ -114,10 +114,6 @@
     width: 100%;
   }
 
-  .navbar a:first-child button{
-    border: none;
-  }
-
   .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -126,15 +122,22 @@
     'opsz' 24
   }
 
+  .hamburger{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
   /* footer styling starts here */
   .footer{ 
     font-size: 1.15rem;
     margin: 33vh 5% 10vh 5%;
     width: 90%;
-    height: 40vh;
+    height: 40vh; /*fontsize, */
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .footer-logo-container{
@@ -158,11 +161,10 @@
   .footer-logo p{
     margin-top: 21px;
   }
+  
   .footer-logo img{
-    padding: 0px;
-    margin: 0px;
-    height: 80px;
-    width: 80px;
+    width: 400px;
+    height: auto;
   }
 
   .intro{
@@ -264,14 +266,14 @@
   .productDetails{
     display: flex;
     align-items: center;
-    
-    gap: 80px;
-
+    flex-wrap: wrap;
+    gap: 20px 80px;
+    margin-top: 1.5rem;
     /* display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;*/
-    padding: 40px 5%;
+    padding: 0 5%;
   }
 
   .productDetails select{
@@ -337,6 +339,7 @@
 
   .size-selector{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 10px;
   }
@@ -637,7 +640,7 @@
     margin-bottom: 8%;
   }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
 .link {
     display: block;       /* or flex */
@@ -646,31 +649,119 @@
     width: 45%;
   }
 
-  .hero{
+  .header{
+    align-items: center;
+  }
+
+  .logo img{
+    height: 60px;
+    width: 60px;
+  }
+
+  .logo-text{
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .hamburger{
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 7vh;
+    right: 0;
+    height: 30vh;
+    flex-direction: column;
+ 
+    display: none;
+    padding: 1rem 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .navbar button{
+    /* border: 1px solid black;
+    border-left: 0px;
+    border-right: 0px; */
+  }
+  .navbar.active{
+    display: flex;
+  }
+
+  .navbar button:active{
+    background-color: rgb(201, 199, 199);
+    transform: scale(1);
+  }
+
+  #cart-length{
+    position: relative;
+    top: -4vh;
+    left: 75%;
+  }
+
+  .footer{
+    width: 100%;
+    margin: 20vh 0;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 10%;
+  }
+
+  .footer-logo img{
+    width: 200px;
+    height: 57.4px;
+  }
+
+  .footer-logo-container{
     display: flex;
     justify-content: center;
+    margin: -9px 0;
+    margin-left: -14px;
+  }
+
+  .copyright{
+    font-size: 10px;
   }
   
   .hero img{
     width: 100%;
-    height: 33vh;
-    object-fit: cover;
-    
+    height: auto;
+    object-fit: scale-down;
   }
 
   .Products{
     display: flex;
     gap: 2rem 0rem ;
+    margin: 5rem 0;
+    margin-top: 3rem;
     justify-content: space-around;
   }
 
-    .ProductCard{
-      width: 100%;
-      height: 300px;
-    }
+  .searchBox{
+    width: 45%;
+  }
+
+  .filters select{
+    width: 50%;
+  }
+
+  .ProductCard{
+    width: 100%;
+    height: 300px;
+  }
 
   .ProductCard img{
     height: 250px;
     width: 100%  
+  }
+
+  .productDetails img{
+    height: 400px;
+    width: 400px;
   }
 }

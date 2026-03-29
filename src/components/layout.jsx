@@ -15,7 +15,7 @@ function Layout(){
             <div className="header">
                 <div onClick={logoClick} className="logo">
                     <img src={panda}/>
-                    <p>ShoePanda</p>
+                    <p className="logo-text">ShoePanda</p>
                 </div>
                 <Navbar />
             </div>

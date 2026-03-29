@@ -21,7 +21,7 @@ function ProductDetails(){
                 
                 <p>₹{currentProduct.price}</p>
 
-                <p className="size-selector-text">Please select a size</p>
+                <p className="size-selector-text">Please select a size :</p>
                 <div className="size-selector">
                     {[4,5,6,7,8,9,10].map((s) => (
                                 <button

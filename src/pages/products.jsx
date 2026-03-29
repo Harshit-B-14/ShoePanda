@@ -25,7 +25,7 @@ function Products(){
                 onChange={(query) => setSearch(query.target.value)}>
             </input>
 
-            <select value={sort} onChange={(o) => setSort(o.target.value)}>
+            <select className="sort-box" value={sort} onChange={(o) => setSort(o.target.value)}>
                 <option value="">Select Sorting Options</option>
                 <option value="AtoZ">A to Z</option>
                 <option value="low">Price: Low to high</option>

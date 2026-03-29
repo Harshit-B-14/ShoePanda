@@ -1,4 +1,4 @@
-import panda from "../assets/panda-logo.jpg"
+import panda from "../assets/full-logo.png"
 import { useNavigate } from "react-router-dom"
 
 function Footer(){
@@ -11,7 +11,6 @@ function Footer(){
                 <div className="footer-logo-container contact-us">
                     <div className="footer-logo">
                         <img src={panda}/>
-                        <p>ShoePanda</p>
                     </div>
                     <p className="intro">Modern shoe store offering a thoughtfully curated collection of stylish,
                         comfortable, and high-quality footwear for everyday wear.
