@@ -203,12 +203,13 @@
     font-size: 2.3rem;
   }
 
+  /*Contact page styling starts here*/
   .contact{
     display: flex;
     flex-direction: column;
     align-items: center;
     /* height: 60vh; */
-    gap: 2.5rem;
+    gap: 1.7rem;
     padding: 4%;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -764,4 +765,62 @@
     height: 400px;
     width: 400px;
   }
+
+  .contact{
+    gap: 1rem;
+    width: 90%;
+  }
+
+  .contact-heading{
+    font-size: 2.3rem;
+  }
+
+  .contact-details{
+    gap: 0.8rem;
+    flex-direction: column;
+  }
+
+  .important-p{
+    font-size: 1rem;
+  }
+
+  .non-important-p{
+    font-size: 0.8rem;
+  }
+  
+  .contact-follow{
+    gap: 0.8rem;
+  }
+  /* .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .contact-heading{
+    margin: 0;
+    font-size: 2.3rem;
+  }
+
+  .contact-details{
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .contact-follow{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .important-p{
+    margin: 0;
+    font-size: 1.4rem;
+  } */
+
 }
