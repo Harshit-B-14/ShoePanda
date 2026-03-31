@@ -768,7 +768,7 @@
 
   .contact{
     gap: 1rem;
-    width: 90%;
+    width: 100%;
   }
 
   .contact-heading{
@@ -781,11 +781,11 @@
   }
 
   .important-p{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .non-important-p{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   
   .contact-follow{
