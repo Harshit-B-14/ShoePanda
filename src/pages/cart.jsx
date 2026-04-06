@@ -1,23 +1,19 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
+import { useNavigate } from "react-router-dom";
+import OrderSummary from "../components/orderSummary";
 import CartItem from "../components/cartItem";
 
 function CartPage(){
 
     let navigate = useNavigate();
+    
+    let { cart } = useContext(CartContext);
 
     function continueShopping(){
-        navigate("/");
+        navigate('/');
     }
-
-    let { cart } = useContext(CartContext);
-    const cartTotal = cart.length>0 ? 
-        cart.reduce((total, item) => total + (item.price *  item.quantity), 0) : 0;
-
-    const totalQuantity = cart.length>0 ?
-        cart.reduce((total, item) => total + (item.quantity),0) : 0;
-
+    
     return <>
         {/* <Header></Header> */}
         <div className="cartPage-container">
@@ -40,12 +36,7 @@ function CartPage(){
                     }
                 </div>    */}
             </div>
-            {cart.length > 0 && (<div className="order-summary">
-                <h1>Order Summary</h1>
-                <h2 className="cart-total">{cart.length > 0 && `Total : ₹ ${cartTotal}`}</h2>
-                <h2 className="cart-total">{cart.length > 0 && `Quantity : ${totalQuantity}`}</h2>
-                {cart.length > 0 && (<button className="checkout-button" onClick = {() => navigate("/checkout")} >Checkout</button>)}
-            </div>)}
+            <OrderSummary handleClick={() => navigate("/checkout")}></OrderSummary>
         </div>
     </>
 }
