@@ -13,7 +13,7 @@ function OrderPlaced(){
                      justifyContent:"center", flexDirection: "column", 
                      height: "60vh" }}>
             <h1>Order Placed Successfully🎉</h1>
-            <h2>Thank you for your purchase</h2>
+            <h2 style={{fontWeight: "1" }}>Thank you for your purchase</h2>
             <button onClick={continueShopping} className="checkout-button">Continue Shopping</button>
         </div>
     )

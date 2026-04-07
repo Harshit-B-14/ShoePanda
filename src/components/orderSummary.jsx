@@ -16,9 +16,15 @@ function OrderSummary({handleClick}){
         <>
             {cart.length > 0 && (
                 <div className="order-summary">
-                    <h1>Order Summary</h1>
-                    <h2 className="cart-total">{`Total : ₹ ${cartTotal}`}</h2>
-                    <h2 className="cart-total">{`Total Items : ${totalQuantity}`}</h2>
+                    <h2>Order Summary</h2>
+                    <div className="order-details" >
+                        <p className="cart-total">{`Total :`}</p>
+                        <p>{`₹ ${cartTotal}`}</p>
+                    </div>
+                    <div className="order-details" >
+                        <p className="cart-total">{`Total Items :`}</p>
+                        <p>{` ${totalQuantity}`}</p>
+                    </div>                    
                     <button className="checkout-button" onClick = {handleClick} type="submit" >Place Order</button>
                 </div>)}
         </>
