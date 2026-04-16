@@ -9,7 +9,7 @@ function OrderPlaced(){
     }
 
     return (
-        <div style={{display: "flex", alignItems: "center", 
+        <div className = "order-placed" style={{display: "flex", alignItems: "center", 
                      justifyContent:"center", flexDirection: "column", 
                      height: "60vh" }}>
             <h1>Order Placed Successfully🎉</h1>
