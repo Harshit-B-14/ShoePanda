@@ -135,8 +135,10 @@
   .footer{ 
     font-size: 1.15rem;
     margin: 33vh 5% 10vh 5%;
+    
     width: 90%;
-    height: 40vh; /*fontsize, */
+    min-height: 40vh; /*fontsize, */
+    
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -152,6 +154,7 @@
     align-items: flex-start;
     margin-left: -1.25rem;
   }
+  
   .footer-logo-container p{
     width: 80%;
   }
@@ -162,7 +165,9 @@
   }
   
   .footer-logo img{
-    width: 400px;
+    width: 90%;
+    max-width: 500px;
+    margin-left: -1rem;
     height: auto;
   }
 
@@ -367,10 +372,13 @@
 
   .cartPage-container{
     width: 95%;
+    min-width: 100px;
 
     padding: 0 2.5%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+
     margin-bottom: 45vh;
   }
 
@@ -411,7 +419,9 @@
 
   .checkout-button{
     display: block;
-    height: 6vh;
+    height: auto;
+
+    padding: 10px;
   
     font-size: 1.15rem;
     border: none;
@@ -537,8 +547,11 @@
     
     background-color: #f1f1f1;
     border-radius: 10px;
+    
     padding: 1rem;
+    
     height: 30vh;
+    max-height: 300px;
     width: 20%;
     min-width: 190px;
   }

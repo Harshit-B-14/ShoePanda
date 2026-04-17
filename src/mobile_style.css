@@ -17,6 +17,7 @@
   }
 
   .logo-text{
+    display: none;
     margin: 0;
     font-size: 25px;
   }
@@ -74,6 +75,7 @@
   .footer-logo img{
     width: 200px;
     height: 57.4px;
+    margin-left: 0;
   }
 
   .footer-logo-container{
@@ -81,6 +83,9 @@
   }
 
   .copyright{
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    
     font-size: 10px;
   }
   
@@ -247,12 +252,18 @@
     font-size: 0.6rem;
   }
 
+  .order-summary p{
+    font-size: 1rem;
+  }
+
   .order-summary h2{
-    font-weight: 200;
+    font-size: 1.3rem;
+    font-weight: 500;
   }
 
   .checkout-button{
-    height: 4.5vh;
+    height: auto;
+    padding: 10px;
   }
 
   /* checkout page styling */

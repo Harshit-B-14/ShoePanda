@@ -40,7 +40,7 @@ function Footer(){
             <div className="copyright">
                 <p>Copyright @2026 ShoePanda</p>
                 <p>Designed by : Harshit Bhandari</p>
-                <p>Code by : Harshit-B-14 on GitHub</p>
+                <p id="mid-para" >Code by : Harshit-B-14 on GitHub</p>
             </div>
         </>
     )
