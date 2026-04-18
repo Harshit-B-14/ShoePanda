@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ProductCard from "../components/productCard";
+// import { getProductList } from "../assets/productList";
 import ProductList from "../assets/productList";
 
 function Products(){
 
+    // const [ProductList, setProductList] = useState([]);
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("");
+
+    // useEffect(()=>{
+    //     getProductList().then(setProductList);
+    // },[]);
 
     let products = [...ProductList];
 

@@ -1,9 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-import ProductList from "../assets/productList";
+// import { getProductList } from "../assets/productList";
+import ProductList from "../assets/productList"
 import { CartContext } from "../context/cartContext";
 
 function ProductDetails(){
+    // const [ProductList, setProductList] = useState([]);
+
+    // useEffect(()=>{
+    //     getProductList().then(setProductList);
+    // },[])
+
     const [size, setSize] = useState(4);
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
